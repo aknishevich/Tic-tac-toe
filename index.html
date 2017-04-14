@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Крестики-нолики</title>
+	<link rel="stylesheet/less" type="text/css" href="style.less">
+	<script type="text/javascript" src="less.js"></script>
+	<script type="text/javascript" src="jquery-3.1.1.min.js"></script>
+</head>
+<body>
+<div class="container">
+	<div class="gameField"></div>
+</div>
+<div class="options">
+<div class="options1">
+		<button id="restart" onclick="turn = 'cross';remove()">Restart</button>
+		<button id="back" onclick="back()">Step<br>Back</button>
+		<button id="forward" onclick="forward()">Step<br>Forward</button>
+		<button id="options" onclick="$('.settings').show()">Options</button>
+	</div>
+</div>
+<div class="settings">
+<script type="text/javascript">$(".settings").hide();</script>
+<div class="hide" onclick="$('.settings').hide()"></div>
+<div class="setting_bg">
+	<div class="container">
+		Select field size<br>
+			<select id="selectField">
+			<option value="1">3x3(3)</option>
+			<option value="2">5x5(4)</option>
+			<option value="3">10x10(5)</option>
+			<option value="4">15x15(5)</option>
+			</select><br>
+			<button onclick="Apply()">Apply</button>
+			<div class="options2">
+			or<br>
+			enter your size<br>
+		<input type="text" name="rowCount" placeholder="Row count">
+		<input type="text" name="cellCount" placeholder="Cell count">
+		<input type="text" name="stepsCount" placeholder="Steps to win">
+		<button onclick="Enter()">Enter</button>
+		<br>
+		<button class="close" onclick="$('.settings').hide()">Close</button>
+		</div>
+	</div>
+	</div>
+</div>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
