@@ -153,11 +153,11 @@ function check(){
 	for (var i = 0; i < r; i++){
 		for (var j = 0; j < c; j++) {
 			if (field[i][j] != null){
-				count++;
 				if (gorCheck(i,j) === 0)
 					if (vertCheck(i,j) === 0)
 						if (diagLCheck(i,j) === 0) 
 							if (diagRCheck(i,j) === 0){
+								count++;
 								if (count >= c * r) draw();
 							}
 							else break;
